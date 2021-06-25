@@ -7,7 +7,8 @@
     "test": "node test/runner.js -t functional",
     "coverage": "node_modules/.bin/nyc node test/runner.js -t functional -l && node_modules/.bin/nyc report --reporter=text-lcov | node_modules/.bin/coveralls",
     "lint": "eslint lib",
-    "changelog": "conventional-changelog -p angular -i HISTORY.md -s"
+    "changelog": "conventional-changelog -p angular -i HISTORY.md -s",
+    "test-npm-security": "npm audit --production --audit-level=high"
   },
   "repository": {
     "type": "git",
@@ -18,8 +19,8 @@
     "core"
   ],
   "dependencies": {
-    "bson": "~1.0.4",
-    "require_optional": "~1.0.0"
+    "bson": "^1.1.4",
+    "require_optional": "^1.0.1"
   },
   "devDependencies": {
     "request": "2.65.0",
